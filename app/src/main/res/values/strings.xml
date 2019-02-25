@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">My Météo</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="prompt_login">Login</string>
+    <string name="prompt_password">Mot de passe</string>
+    <string name="label_accueil">Bienvenue sur ma première application météo</string>
+    <string name="connexion">Connexion</string>
+    <string name="create_account">Créer un compte</string>
+    <string name="snackbar_welcome">Salut %s</string>
+    <string name="home_label_firstLogin">Bienvenue %s</string>
+    <string name="title_activity_home">Prévisions météo à 5 jours</string>
+    <string name="title_activity_detail">Détail</string>
+    <string name="prompt_location">Ville Française</string>
+    <string name="search_location_error">Impossible de récupérer les informations.</string>
+    <string name="search_location_bad_name">Avez-vous entré un nom de ville correct ?</string>
+    <string name="search_location_no_response">Etes-vous bien connecté à internet ?</string>
+    <string name="errorCityEmpty">Merci d\'entrer un nom de ville</string>
+    <string name="err">Erreur de récupération des informations</string>
+    <string name="ville_err_notfound">La ville n\'a pas été trouvé par le service !</string>
+    <string name="ok">ok</string>
+    <!-- Bloc de détail d'une ville -->
+    <string name="infoVille">%s - France</string>
+    <string name="sunsetVille">Lever du soleil à %s et coucher à %s</string>
+    <string name="windInfoVille">Vent de %dkm/h - direction : %s</string>
+    <string name="otherInfoVille">Humidité : %d</string>
+    <string name="timeInfoVille">Informations récupérées à %s</string>
+    <string name="menuItemPartage">Partager l\'info</string>
+    <string name="menuItemAbout">About</string>
+    <string name="menuItemGmap">Ouvrir Maps</string>
+    <!-- Infos de page de détail-->
+
+</resources>

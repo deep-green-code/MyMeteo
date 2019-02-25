@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    android:focusableInTouchMode="true">
+
+    <!-- Content of app -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".LoginActivity"
+        tools:showIn="@layout/activity_login"
+        android:background="@drawable/catknight">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+
+                android:backgroundTintMode="screen"
+                android:gravity="center_horizontal">
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="@string/label_accueil"
+                        android:textAlignment="center"/>
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/meteo"
+                        android:layout_gravity="center"/>
+
+                    <android.support.v7.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prompt_login"
+                        android:textColor="@color/design_default_color_primary_dark"
+                        android:textAlignment="center"/>
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextLoginHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_login"
+                        android:inputType="textPersonName"
+                        android:nextFocusDown="@id/editTextPassHome"
+                        android:maxLength="32" />
+
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextPassHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/prompt_password"
+                        android:inputType="textPassword"
+                        android:nextFocusDown="@id/loginButtonHome" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/loginButtonHome"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/connexion"
+                        android:background="@color/colorPrimary"
+                        android:layout_marginTop="15dp" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/createAccountButtonHome"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/create_account"
+                        android:background="@color/design_default_color_primary"
+                        android:layout_marginTop="15dp" />
+
+                </android.support.v7.widget.LinearLayoutCompat>
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.design.widget.CoordinatorLayout>

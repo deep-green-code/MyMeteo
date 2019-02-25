@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp" >
+
+    <ImageView android:id="@+id/iconeDetails"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        tools:background="#AAA"
+        android:backgroundTint="@color/transparent"
+        android:src="@drawable/clouds_icon"/>
+
+    <TextView android:id="@+id/tempsDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/iconeDetails"
+        android:layout_alignTop="@+id/iconeDetails"
+        android:textStyle="bold"
+        tools:text="Jour - prévision"
+        android:textSize="20dp"/>
+
+    <TextView android:id="@+id/conditionDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        android:layout_alignLeft="@+id/tempsDetails"
+        android:layout_below="@+id/tempsDetails"
+        tools:text="Températures"
+        android:textSize="18dp"/>
+
+    <!-- temperatures -->
+    <TextView android:id="@+id/temperatureMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/cold_blue"
+        android:layout_toLeftOf="@+id/temperatureMax"
+        android:textSize="30dp"
+        tools:text="20°C" />
+    <TextView android:id="@+id/temperatureMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/warm_orange"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="20dp"
+        android:textSize="30dp"
+        tools:text="54°C" />
+
+</RelativeLayout>

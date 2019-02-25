@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:focusableInTouchMode="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/catknight">
+
+            <android.support.v7.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTintMode="screen"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <!-- bloc du texte de bienvenue (en cas de login) -->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewBienvenue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center" />
+
+                <!-- Layout de recherche : champ texte de recherche + bouton de recherche-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <android.support.v7.widget.AppCompatEditText
+                        android:id="@+id/editTextLocationHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@id/imgSearchLocButton"
+                        android:hint="@string/prompt_location"
+                        android:nextFocusDown="@id/imgSearchLocButton"
+                        android:inputType="text"
+                        android:maxLength="32"
+                        android:singleLine="true"/>
+                    <android.support.v7.widget.AppCompatImageButton
+                        android:id="@+id/imgSearchLocButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:backgroundTint="@color/transparent"
+                        android:src="@mipmap/baseline_search_black_36" />
+                </RelativeLayout>
+
+                <!-- bloc d'affiachage d'erreur-->
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewResultJson"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+                <android.support.v7.widget.AppCompatTextView
+                    android:id="@+id/textViewResultError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"/>
+                <!-- fin du bloc d'affiachage d'erreur-->
+
+                <!-- Bloc d'infos sur la ville choisie -->
+                <RelativeLayout
+                    android:id="@+id/blocInfoVille"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView android:id="@+id/iconeVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:background="#AAA"
+                        android:backgroundTint="@color/transparent"
+                        android:src="@drawable/city_icon"
+                        android:layout_margin="5dp"/>
+                    <TextView android:id="@+id/infoVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:layout_margin="10dp"
+                        android:layout_toRightOf="@+id/iconeVille"
+                        android:layout_alignTop="@+id/iconeVille"
+                        android:textStyle="bold"
+                        tools:text="Grenoble - France"
+                        android:textSize="20dp"/>
+                    <TextView android:id="@+id/sunsetVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/grey"
+                        android:layout_alignLeft="@+id/infoVille"
+                        android:layout_below="@+id/infoVille"
+                        android:textStyle="bold"
+                        tools:text="Lever du soleil : 9:00 - coucher du soleil : 17:30" />
+                    <TextView android:id="@+id/windInfoVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightgrey"
+                        android:layout_alignLeft="@+id/sunsetVille"
+                        android:layout_below="@+id/sunsetVille"
+                        tools:text="Vent de 27km/h - direction : S" />
+                    <TextView android:id="@+id/otherInfoVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightgrey"
+                        android:layout_alignLeft="@+id/sunsetVille"
+                        android:layout_below="@+id/windInfoVille"
+                        tools:text="Humidité : 61" />
+                    <TextView android:id="@+id/timeInfoVille"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/lightgrey"
+                        android:layout_alignLeft="@+id/sunsetVille"
+                        android:layout_below="@+id/otherInfoVille"
+                        tools:text="Informations récupérées à 9:00" />
+                </RelativeLayout>
+                <!-- Fin du bloc d'info de ville-->
+
+                <!-- Liste des températures-->
+                <android.support.v4.widget.SwipeRefreshLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/listRefresher">
+
+                    <ListView
+                        android:id="@+id/listViewHome"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    </ListView>
+
+                </android.support.v4.widget.SwipeRefreshLayout>
+
+            </android.support.v7.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>
